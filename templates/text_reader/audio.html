@@ -1,0 +1,14 @@
+{% extends 'text_reader/base.html' %}
+
+    {% block content %}
+    <h1> Audio </h1>
+    <div class="container col-lg-6">
+        {{ text | striptags }}
+        <br><br><br><br>
+        <iframe src="static/test.mp3" allow="autoplay" id="audio" style="display: none"></iframe>
+
+        <audio controls autoplay>
+            <source src="static/test.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+    {% endblock %}
